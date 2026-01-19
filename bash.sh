@@ -1,0 +1,1 @@
+gnome-screenshot -af /tmp/temp_screenshot.png && convert /tmp/temp_screenshot.png -resize 300% -colorspace Gray   -auto-level   -contrast-stretch 1.5%x1.5%   -brightness-contrast 0x25   -sharpen 0x1.0 -type Grayscale -density 300 /tmp/temp_screenshot.png && tesseract /tmp/temp_screenshot.png stdout | xsel -b -i
